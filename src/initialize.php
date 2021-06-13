@@ -15,6 +15,10 @@ $config['DB_NAME'] = env('DB_NAME');
 $config['DB_USER'] = env('DB_USER');
 $config['DB_PASS'] = env('DB_PASS');
 
+//Timeout
+$config['FEED_FETCH_NO_CACHE_TIMEOUT'] = env('FEED_FETCH_NO_CACHE_TIMEOUT',60);
+$config['FILE_FETCH_CONNECT_TIMEOUT'] = env('FILE_FETCH_CONNECT_TIMEOUT',60);
+
 $config['PLUGINS'] = env('ENABLE_PLUGINS');
 $config['SESSION_COOKIE_LIFETIME'] = env('SESSION_COOKIE_LIFETIME') * 3600;
 $config['SINGLE_USER_MODE'] = filter_var(env('SINGLE_USER_MODE'), FILTER_VALIDATE_BOOLEAN);

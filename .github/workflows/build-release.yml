@@ -1,8 +1,14 @@
 name: "[builder] CI for releases"
 
 on:
-  repository_dispatch:
-    types: build
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'This is a release username!'
+        required: false
+        default: 'release'
+  #repository_dispatch:
+     #types: build
   push:
     branches:
       - main
